@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Bootstrap</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<!--<link rel="stylesheet" href="styles.css"/>-->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+		/>
+	</head>
+	<body class="bg-info">
+		<div class="page">
+			<!-- div, koska pelkästään layoutin vuoksi olemassa -->
+			<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+				<!-- menu -->
+				<div class="container-fluid">
+					<div class="navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#eka">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#toka">Toinen sivu</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#kolmas">Kolmas sivu</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Neljäs sivu</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav mb-2 mb-lg-0 me-5">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Dropdown
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" href="#">Tämä</a></li>
+									<li><a class="dropdown-item" href="#">Tai tämä?</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li><a class="dropdown-item" href="#">Ehkäpä tämä?</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<header class="section header">
+				<!-- header -->
+				<h1 class="display-1 text-md-start text-lg-center">
+					Tähän tulee header
+				</h1>
+			</header>
+			<article class="section content container" id="eka">
+				<!-- article -->
+					<div class="row align-items-center justify-content-evenly">
+						<div class="col-md-3 mt-5 mb-3">
+							<div class="text-center">
+								<img
+									src="images/content.svg"
+									class="img-fluid"
+									alt="esimerkkikuva"
+								/>
+							</div>
+						</div>
+						<div class="col-md-3 mt-3 mb-3">
+							<div class="clearfix">
+								<img
+									src="images/content.svg"
+									class="rounded mt-2 mb-1 ms-2 float-md-end"
+									alt="esimerkkikuva"
+								/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Senectus et netus et malesuada. Cras pulvinar mattis nunc sed.
+									Consequat nisl vel pretium lectus quam. Viverra ipsum nunc
+									aliquet bibendum enim facilisis gravida neque convallis.
+									Placerat duis ultricies lacus sed turpis tincidunt id aliquet.
+									Sodales neque sodales ut etiam sit amet nisl purus. Quisque
+									non tellus orci ac auctor augue. Diam maecenas ultricies mi
+									eget mauris pharetra et ultrices.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-5 mt-3 mb-5 ms-1">
+							<div class="text-center">
+								<img
+									src="images/wpjaubuntut15.png"
+									class="rounded img-fluid"
+									alt="esimerkkikuva"
+								/>
+							</div>
+						</div>
+					</div>
+			</article>
+			<aside class="text-center container my-5" id="toka">
+				<!-- aside, koska liittyy koko sivustoon,mutta ei pysty erottamaan omaksi artikkelikseen -->
+				<h2>Kirjaudu tästä hienoille sivuille, jotka eivät ole nämä sivut:</h2>
+				<form>
+					<div class="row justify-content-center">
+						<div class="col-lg-5">
+              <label for="tunnus" class="form-label">Käyttäjätunnuksesi</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" id="tunnus" placeholder="Käyttäjätunnus" aria-describedby="basic-addon1">
+              </div>
+
+						</div>
+						<div class="col-lg-5">
+							<label for="salasana" class="form-label">Salasanasi</label>
+							<div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Salasanasi" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Kirjaudu</button>
+              </div>
+						</div>
+					</div>
+				</form>
+			</aside>
+      <div class="container" id="kolmas">
+         <!-- loput sectioneita, koska riippuu siitä mitän näihin tule (nythän nää on periaatteessa figureita) -->
+        <section class="row justify-content-between my-5 py-2">
+          <div class="col-lg-2 align-self-center text-center">
+            <figure>
+              <blockquote class="blockquote">
+                <p>If you spend too much time thinking about a thing, you’ll never get it done.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Bruce Lee
+              </figcaption>
+            </figure>
+          </div>
+			    <div class="col-lg-7 text-center ">
+            <p>Jos tämä inspiroi sinua ja haluat nähdä lisää, anna tietosi alle, niin saat spämmiä mailiisi.</p> 
+            <form>
+              <div class="form-check-sm">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio1" checked>
+                <label class="form-check-label" for="radio1">
+                  Olen täysi-ikäinen
+                </label>
+              </div>
+              <div class="form-check-sm mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio2">
+                <label class="form-check-label" for="radio2">
+                  Olen ala-ikäinen
+                </label>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Koko nimi</span>
+                <input type="text" aria-label="Etunimi" class="form-control" placeholder="Etunimi">
+                <input type="text" aria-label="Sukunimi" class="form-control" placeholder="Sukunimi">
+              </div>
+              <div class="mb-3">
+                <label for="terkut" class="form-label">Kerro terveisesi</label>
+                <textarea class="form-control" id="terkut" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="sposti" class="form-label">Sposti</label>
+                <input type="email" class="form-control" id="sposti" placeholder="mina@joku.com">
+              </div>
+              <button type="submit" class="mb-3 btn btn-outline-light">Lähetä</button>
+            </form>
+          </div>
+          <div class="col-lg-3 align-self-center mt-5">
+							<div class="text-center">
+								<img
+									src="images/feature.svg"
+									class="img-fluid"
+									alt="esimerkkikuva"
+								/>
+						</div>
+          </div>
+        </section>
+      </div>
+			
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

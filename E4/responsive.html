@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="../styles.css"/>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  </head>
+  <body>
+    <div class="page"> <!-- div, koska pelkästään layoutin vuoksi olemassa -->
+      <nav class="section menu"> <!-- menu -->
+      </nav>
+      <header class="section header"><!-- header -->
+        <figure class="photo">
+          <picture>
+            <source media="(min-width: 401px)"
+                    srcset="../images/photo-big.jpg"/>
+            <source media="(max-width: 400px)"
+                    srcset="../images/photo-tall.jpg"/>
+            <img src="../images/photo-small.jpg"/>
+          </picture>
+        </figure>
+      </header>
+      <article class="section content"><!-- article -->
+        <figure class="illustration">
+          <img src="../images/illustration-small.png" srcset="../images/illustration-small.png 1x,
+          ../images/illustration-big.png 2x" style="max-width: 500px"/>
+        </figure>
+      </article>
+      <aside class="section sign-up"> <!-- aside, koska liittyy koko sivustoon,mutta ei pysty erottamaan omaksi artikkelikseen -->
+        <img src="../images/sign-up.svg"/>
+      </aside>
+      <section class="section feature-1"> <!-- loput sectioneita, koska riippuu siitä mitän näihin tule (nythän nää on periaatteessa figureita) -->
+        <img src="../images/feature.svg"/>
+      </section>
+      <section class="section feature-2">
+        <img src="../images/feature.svg"/>
+      </section>
+      <section class="section feature-3">
+        <img src="../images/feature.svg"/>
+      </section>
+    </div>
+  </body>
+</html>
