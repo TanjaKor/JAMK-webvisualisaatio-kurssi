@@ -2,7 +2,7 @@
 
 Pages link:
 
-http://ab3775.pages.labranet.jamk.fi/web-vizualisation
+http://ab3775.pages.labranet.jamk.fi/web-visualisaatio
 
 ## Getting started
 
