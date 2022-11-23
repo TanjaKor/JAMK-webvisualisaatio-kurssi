@@ -10,10 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.css">
     <title>Kuikan Ranch</title>
+    
   </head>
   <body class="bg-gradient-hot" id="koti">
-    <div class="col-md-8 py-5 px-3 mx-auto">
+    <div class="col-md-9 py-5 px-3 mx-auto">
       <header class="pb-1 mb-5">
         <!-- navigaatiopalkki -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -47,6 +49,15 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#majoitus">Majoitus</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ruoka">Ruoka</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#varaa">Varaa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kauppa">Kauppa</a>
               </li>
             </ul>
           </div>
@@ -225,10 +236,246 @@
               </div>
               </div>      
         </section>
+
         <!-- ruokaosa, tehty bootstrapin flexboxilla -->
         <section id="ruoka">
-          <div class="d-flex justify-content-center">
+          <header class="d-md-flex justify-content-center">
             <h1>Ruoka</h1>
+          </header>
+          <div class="d-md-flex flex-wrap flex-md-nowrap flex-row justify-content-between">
+            <!--Aamupala-->
+            <div class="p-2 my-4">
+              <div class="card">
+                <img src="assets/img/blueberries-g685df11a8_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title">Aamupala</h2>
+                  <p class="card-text">Aamupalat tarjoillaan arkipäivisin klo 6-9:30 ja la & su klo 7-10:30 suuressa salissa kartanon alakerrassa.
+                    Aamupalalla tarjotaan aina tuoreita ainesosia vaihdellen sesongin mukaan. Vakiona mukana kaurapuuro ja kauden marjat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Lounas-->
+            <div class="p-2 my-4">
+              <div class="card">
+                <img src="assets/img/bread-g8835a8920_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title">Lounas</h2>
+                  <p class="card-text">Lounas tarjoillaan seisovasta pöydästä arkipäivisin klo 11:00 -14:00 ja viikonloppuisin klo 12:00-15:00 kartanon ruokailutiloissa. 
+                    Mahdollisuuksien mukaan pääset myös ulos terassille syömään.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Päivällinen-->
+            <div class="p-2 my-4">
+              <div class="card">
+                <img src="assets/img/club-sandwich-g345f2d26e_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title">Päivällinen</h2>
+                  <p class="card-text">Päivällinen tarjoillaan klo 17:00 eteenpäin aina klo 20:00 saakka joka päivä kartanon ruokailutiloissa. 
+                    kelien salliessa myös päivällinen voidaan tarjoilla terassille. Päivällisellä on viikoittain vaihtuva listaruoka sesongin mukaan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-md-flex flex-row flex-wrap flex-md-nowrap justify-content-around">
+            <!--Iltapala-->
+            <div class="p-2 mb-4">
+              <div class="card">
+                <img src="assets/img/fig-gfb9a69382_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title">Iltapala</h2>
+                  <p class="card-text">Iltapala tarjoillaan 5-tähden majoituksen valinneille joko majoitustiloihin tai ruokailutiloihin terassi mukaan lukien.
+                    Iltapala tulee tilata viimeistään klo 17:00 ja tarjoilut aloitetaan klo 20:00 alkaen klo 23:30 saakka.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Välipalat-->
+            <div class="p-2 mb-4">
+              <div class="card">
+                <img src="assets/img/fruits-g9d6c6dfec_640.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title">Välipalat</h2>
+                  <p class="card-text">Välipaloja on tarjolla 5-tähden majoituksen varanneille koko päivän keittiössä. Ilmoitathan varausta tehdessäsi erityistoiveista.
+                    Vakiovälipalaan kuuluu maustamaton jogurtti, kauden marjat ja hedelmät, granola, mysli, leipä, juusto, leikkele ja tuoreita vihanneksia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!--Varaussivu-->
+        <section id="varaa">
+          <div class="container"> 
+          <h1>Varaa oma unelmalomasi nyt!</h1>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="name">Etu- ja Sukunimi</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Osoite</label>
+              <input type="text" class="form-control" id="address" placeholder="Tie ja numero">
+            </div>
+            <div class="form-row justify-content-center">
+              <div class="form-group col-md-6">
+                <label for="kaupunki">Kaupunki</label>
+                <input type="text" class="form-control" id="kaupunki">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="postinro">Postinumero</label>
+                <input type="text" class="form-control" id="postinro">
+              </div>
+            </div>
+            <div class="form-row mt-3">
+              <div class="form-group col-md-4">
+                <select class="form-control">
+                    <option selected>Henkilömäärä</option>
+                    <option value="1">Yksi</option>
+                    <option value="2">Kaksi</option>
+                    <option value="3">Kolme</option>
+                    <option value="4">Neljä</option>
+                    <option value="5">Viisi</option>
+                    <option value="6">Kuusi</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <select class="form-control">
+                  <option selected>Huoneet</option>
+                  <option value="1">Yksi</option>
+                  <option value="2">Kaksi</option>
+                  <option value="3">Kolme</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <select class="form-control">
+                  <option selected>Loman tyyppi</option>
+                  <option value="1">Aktiivi</option>
+                  <option value="2">Hemmottelu</option>
+                  <option value="3">Ruoka</option>
+                  <option value="4">Luonto- ja eläinkokemus</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6 justify-content-center" >
+              <div class="form-group">
+                 <div class="input-group date" id="datetimepicker1">
+                    <input type="text" class="form-control" />
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                 </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lisatiedot">Lisätiedot</label>
+              <textarea class="form-control" id="lisatiedot" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-dark btn-block">Lähetä</button>
+         
+          </form>
+          </div>
+        </section>
+
+        <!--Verkkokauppa-->
+        <section id="kauppa">
+          <h1>Osta Kuikan Ranchin tuotteita!</h1>
+          <div class="d-flex flex-wrap flex-md-nowrap flex-row mt-4">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikan hillo</h5>
+                  <p class="card-text">Ihanan makuinen marjahillo, jota saat aamiaisellakin.</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikan keksit</h5>
+                  <p class="card-text">Lounaspöydän ikisuosikki, kaurakeksit Kuikan kokkien itse leipomana</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikan salaattikastike</h5>
+                  <p class="card-text">TÄllä salaattikastikkeella saat tylsemmänkin salaatin maistumaan huikealta.</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikan munia</h5>
+                  <p class="card-text">Osta yksi tiu kuikan kanojen munia mukaasi.</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap flex-md-nowrap flex-row my-3">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikka-lapaset</h5>
+                  <p class="card-text">Pidä kätesi lämpimänä myös talvipakkasilla!</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikka-pipo</h5>
+                  <p class="card-text">Lämpimin pipo minkä löydät! Neu</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikka-huivi</h5>
+                  <p class="card-text">Hanki vaikka tuliaiseksi ihanalta lomaltasi.</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kuikka-villapaita</h5>
+                  <p class="card-text">Kääriydy lämpimään paitaan ja muistele lämmöllä matkaasi Kuikan Ranchille.</p>
+                  <button class="btn btn-dark">Osta</button>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </section>
             
@@ -242,7 +489,34 @@
       </p>
     </div>
 
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="module" src="assets/js/starter.js"></script>
+    <script src="node_modules/moment/moment.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+    if (window.jQuery().datetimepicker) {
+        $('.datetimepicker').datetimepicker({
+            // Formats
+            // follow MomentJS docs: https://momentjs.com/docs/#/displaying/format/
+            format: 'DD-MM-YYYY hh:mm A',
+            
+            // Your Icons
+            // as Bootstrap 4 is not using Glyphicons anymore
+            icons: {
+                time: 'fa fa-clock-o',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down',
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-check',
+                clear: 'fa fa-trash',
+                close: 'fa fa-times'
+            }
+        });
+    }
+});
+   </script>
   </body>
 </html>

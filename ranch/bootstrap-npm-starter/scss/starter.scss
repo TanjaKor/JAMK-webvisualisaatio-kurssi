@@ -36,17 +36,17 @@ $success: #7952b3;
 $head-font: 'Dancing Script', cursive;
 $norm-font: 'Lato', sans-serif;
 $assetPath :"../img";
-$gradients: () !default;
-$gradients: map-merge((
-    chill: linear-gradient(135deg, #09e485 0%,#0291e3 100%),
-    warm: linear-gradient(135deg, #F2CD48 0%,#FD803F 100%),
-    hot: linear-gradient(135deg, #eb7684 0%,#df8fd2 100%),
-    cold: linear-gradient(135deg, #8019C6 0%,#2F93CC 100%)
-), $gradients);
 $shadow: black 0.3em 0.3em 0.3em;
 $imgshadow: 0.5em 0.2em 1em rgb(72, 72, 72);
 $imgborder: black solid 1px;
 $radius: 15px;
+$gradients: () !default;
+$gradients: map-merge((
+    chill: linear-gradient(135deg, #09e485 0%,#0291e3 100%),
+    warm: linear-gradient(135deg, #F2CD48 0%,#FD803F 100%),
+    hot: linear-gradient(100deg, #eb7684 0%,#9a59f6 100%),
+    cold: linear-gradient(135deg, #8019C6 0%,#2F93CC 100%)
+), $gradients);
 
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
@@ -58,14 +58,14 @@ $radius: 15px;
 @import "bootstrap/scss/images";
 // @import "bootstrap/scss/code";
 @import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/input-group"; // Requires forms
+@import "bootstrap/scss/custom-forms";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar"; // Requires nav
 @import "bootstrap/scss/card";
@@ -127,13 +127,15 @@ div.jumbotron {
   border-radius: $radius;
 }
 
-#majoitus, #ruoka {
+#majoitus, #ruoka, #varaa, #kauppa {
   margin-top: 70px;
 }
+
 // Style Bootstrap icons
 .bi {
   fill: currentcolor;
 }
+
 // Gradient backgrounds
 @mixin bg-gradient($parent, $gradient) {
   #{$parent} {
