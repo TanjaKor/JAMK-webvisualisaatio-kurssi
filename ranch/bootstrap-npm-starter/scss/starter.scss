@@ -42,7 +42,7 @@ $imgborder: black solid 1px;
 $radius: 15px;
 $gradients: () !default;
 $gradients: map-merge((
-    warm: linear-gradient(100deg, #F2CD48 0%,#ff5900 100%),
+    warm: linear-gradient(100deg, #5efa61 0%, #F2CD48 33%, #ff5900 100%),
     hot: linear-gradient(100deg, #eb7684 0%,#9a59f6 100%)
 ), $gradients);
 
@@ -91,6 +91,9 @@ $gradients: map-merge((
 //
 
 @import "icon-list";
+.navbar-brand {
+  font-family: $head-font;
+}
 
 body {
   padding: 3rem 1.5rem;
@@ -100,10 +103,6 @@ body {
 h1, h2 {
   font-family: $head-font;
   text-align: center;
-}
-
-.navbar-brand {
-  font-family: $head-font;
 }
 
 div.jumbotron {

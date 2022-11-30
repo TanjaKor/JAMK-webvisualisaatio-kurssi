@@ -1,1 +1,9 @@
 node_modules
+scss
+.browserslistrc
+package-lock.json
+package.json
+.stylelintrc
+.stylelintignore
+.editorconfig
+
