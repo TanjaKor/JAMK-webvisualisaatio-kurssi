@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.css">
+    
     <title>Kuikan Ranch</title>
     
   </head>
@@ -58,6 +59,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#kauppa">Kauppa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="landing.html">Kauppa</a>
               </li>
             </ul>
           </div>
@@ -174,6 +178,7 @@
             </div>
           </article>
         </section>
+
         <!-- majoitusosa, tehty bootstrapin omalla gridillä -->
         <section id="majoitus">
           <div class="container"> 
@@ -189,7 +194,7 @@
                   suihku. Kunnon hi-teciä vanhan ajan hengessä. Majoitu upeassa
                   1800-luvun täysin remontoidussa kartanossamme. Kartanossa on
                   1-3hlö/huoneet ja jokaisella on oma wc ja suihku. Kunnon
-                  hi-teciä vanhan ajan hengessä. </p>
+                  hi-teciä vanhan ajan hengessä. <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg></p>
                   <button class="btn btn-dark">
                     Katso tarkemmin
                   </button> 
@@ -367,16 +372,22 @@
                 </select>
               </div>
             </div>
-            <div class="col-sm-6 justify-content-center" >
-              <div class="form-group">
-                 <div class="input-group date" id="datetimepicker1">
-                    <input type="text" class="form-control" />
-                    <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+            
+            
+              
+                 <div class="col-sm-10">
+                    <div class="form-group justify-content-center">
+                       <div class="input-group date" id="datetimepicker1">
+                          <input type="text" class="form-control" />
+                          <span class="input-group-addon">
+                          <span class="bi bi-x"></span>
+                          </span>
+                       </div>
+                    </div>
                  </div>
-              </div>
-            </div>
+                 
+           
+            
             <div class="form-group">
               <label for="lisatiedot">Lisätiedot</label>
               <textarea class="form-control" id="lisatiedot" rows="3"></textarea>
@@ -491,32 +502,12 @@
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="module" src="assets/js/starter.js"></script>
-    <script src="node_modules/moment/moment.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
     <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript">
-      jQuery(document).ready(function($) {
-    if (window.jQuery().datetimepicker) {
-        $('.datetimepicker').datetimepicker({
-            // Formats
-            // follow MomentJS docs: https://momentjs.com/docs/#/displaying/format/
-            format: 'DD-MM-YYYY hh:mm A',
-            
-            // Your Icons
-            // as Bootstrap 4 is not using Glyphicons anymore
-            icons: {
-                time: 'fa fa-clock-o',
-                date: 'fa fa-calendar',
-                up: 'fa fa-chevron-up',
-                down: 'fa fa-chevron-down',
-                previous: 'fa fa-chevron-left',
-                next: 'fa fa-chevron-right',
-                today: 'fa fa-check',
-                clear: 'fa fa-trash',
-                close: 'fa fa-times'
-            }
-        });
-    }
-});
-   </script>
+      $(function () {
+          $('#datetimepicker1').datetimepicker();
+      });
+    </script>
   </body>
 </html>

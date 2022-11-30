@@ -42,10 +42,8 @@ $imgborder: black solid 1px;
 $radius: 15px;
 $gradients: () !default;
 $gradients: map-merge((
-    chill: linear-gradient(135deg, #09e485 0%,#0291e3 100%),
-    warm: linear-gradient(135deg, #F2CD48 0%,#FD803F 100%),
-    hot: linear-gradient(100deg, #eb7684 0%,#9a59f6 100%),
-    cold: linear-gradient(135deg, #8019C6 0%,#2F93CC 100%)
+    warm: linear-gradient(100deg, #F2CD48 0%,#ff5900 100%),
+    hot: linear-gradient(100deg, #eb7684 0%,#9a59f6 100%)
 ), $gradients);
 
 @import "bootstrap/scss/functions"; // Required
@@ -80,7 +78,7 @@ $gradients: map-merge((
 @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
@@ -93,7 +91,6 @@ $gradients: map-merge((
 //
 
 @import "icon-list";
-
 
 body {
   padding: 3rem 1.5rem;
