@@ -166,7 +166,7 @@ div.jumbotron {
 }
 
 .keskitetty {
-  text-align: center;
+    text-align: center;
 }
 // Style Bootstrap icons
 .bi {
@@ -184,14 +184,23 @@ div.jumbotron {
   @include bg-gradient(".bg-gradient-#{$gradient}", $value);
  }
 
- @media screen and (max-width: 605px) {
+ @media screen and (max-width: 650px) {
   .ei_mobiili {
     display: none
   }
+  #kauppa .keskitetty div {
+    width: 100% !important;
+  }
  
 } 
-@media screen and (min-width: 605px) {
+@media screen and (min-width: 650px) {
   .mobiili_otsikko {
     display: none
   }
+  #kauppa .keskitetty div{
+    flex: 1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
 } 
