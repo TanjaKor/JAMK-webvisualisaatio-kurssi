@@ -10,26 +10,28 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link href="node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
+    <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
 
     <title>Kuikan Ranch</title>
   </head>
-  <body class="bg-gradient-hot" id="koti">
+  <body data-spy="scroll" class="bg-gradient-hot" id="koti" data-target="#navigaatio">
     <div class="col-md-9 py-5 px-3 mx-auto">
       <header class="pb-1 mb-5">
         <!-- navigaatiopalkki -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" id="navigaatio">
           <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbar1"
+            data-target="#navbar"
             aria-controls="navbarTogglerDemo01"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbar1">
+          <div class="collapse navbar-collapse" id="navbar">
             <a class="navbar-brand" href="#koti">
               <img
                 src="./assets/img/drawing2.svg"
@@ -41,24 +43,24 @@
               Kuikan Ranch
             </a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
+              <li class="nav-item mx-1">
                 <a class="nav-link" href="#koti"
-                  >Koti <span class="sr-only">(current)</span></a
+                  ><i class="fa-solid fa-house fa-sm"></i> Koti</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#majoitus">Majoitus</a>
+              <li class="nav-itemmx-1">
+                <a class="nav-link" href="#majoitus"><i class="fa-solid fa-bed"></i> Majoitus</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#ruoka">Ruoka</a>
+              <li class="nav-itemmx-1">
+                <a class="nav-link" href="#ruoka"><i class="fa-solid fa-utensils"></i> Ruoka</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#varaa">Varaa</a>
+              <li class="nav-itemmx-1">
+                <a class="nav-link" href="#varaa"><i class="fa-regular fa-calendar-check"></i> Varaa</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#kauppa">Kauppa</a>
+              <li class="nav-itemmx-1">
+                <a class="nav-link" href="#kauppa"><i class="fa-solid fa-cart-shopping fa-sm"></i> Kauppa</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item mx-1">
                 <a class="nav-link" href="index.html">Landing</a>
               </li>
             </ul>
@@ -78,8 +80,8 @@
         <!-- koti, tehty bootstrapin omalla gridillä -->
         <section class="container">
           <h1>Esittely yrittäjistä</h1>
-          <div class="row justify-content-center mt-5">
-            <div class="col-md-4 mr-5">
+          <div class="row justify-content-between mt-5">
+            <div class="col-sm-5 esittely">
               <a
                 class="btn"
                 data-toggle="collapse"
@@ -109,7 +111,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 ml-5">
+            <div class="col-sm-5 esittely">
               <a
                 class="btn"
                 data-toggle="collapse"
@@ -185,7 +187,7 @@
 
             <!--kartano-->
             <section class="row justify-content-start mt-4">
-              <div class="col-lg-5 my-4 mx-4">
+              <div class="col-md-4 my-4 mx-4">
                 <header class="my-3">
                   <h2>Kartano</h2>
                 </header>
@@ -197,9 +199,9 @@
                   1-3hlö/huoneet ja jokaisella on oma wc ja suihku. Kunnon
                   hi-teciä vanhan ajan hengessä.
                 </p>
-                <button class="btn btn-dark">Katso tarkemmin</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-circle-info fa-lg"></i><br>Katso tarkemmin</button>
               </div>
-              <div class="col-lg-5 my-4 mx-4 align-self-center">
+              <div class="col-md-5 my-4 mx-4 align-self-center">
                 <img
                   class="img-fluid kuva"
                   src="assets/img/mansion-g3b9271ed2_640.jpg"
@@ -209,13 +211,13 @@
 
             <!--Mökit-->
             <section class="row justify-content-end mt-6">
-              <div class="col-lg-5 my-4 mx-4 align-self-center order-12 order-md-1">
+              <div class="col-md-5 my-4 mx-4 align-self-center order-12 order-md-1">
                 <img
                   class="img-fluid kuva"
                   src="assets/img/holiday-home-g1bf549fbd_640.jpg"
                 />
               </div>
-              <div class="col-lg-4 my-4 mx-4 order-1 order-md-12">
+              <div class="col-md-4 my-4 mx-4 order-1 order-md-12">
                 <header class="my-3">
                   <h2>Maalaismökit</h2>
                 </header>
@@ -226,13 +228,13 @@
                   jääkaappi-pakastin, mikro, kahvinkeitin ja vedenkeitin sekä
                   keittiön perustarpeet lisäksi löytyy tv sekä wifi.
                 </p>
-                <button class="btn btn-dark">Katso tarkemmin</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-circle-info fa-lg"></i><br>Katso tarkemmin</button>
               </div>
             </section>
 
             <!--Lato-->
             <section class="row justify-content-start mt-6">
-              <div class="col-lg-5 mx-4 my-4">
+              <div class="col-md-4 mx-4 my-4">
                 <header class="my-3">
                   <h2>Latomajoitus</h2>
                 </header>
@@ -244,9 +246,9 @@
                   tosi hienot ja nkyaikaiset. Varustukseen ei kuulu
                   keittiövälineitä, mutta tv ja wifi kuuluu.
                 </p>
-                <button class="btn btn-dark">Katso tarkemmin</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-circle-info fa-lg"></i><br>Katso tarkemmin</button>
               </div>
-              <div class="col-lg-5 my-4 mx-4 align-self-center">
+              <div class="col-md-5 my-4 mx-4 align-self-center">
                 <img
                   class="img-fluid kuva"
                   src="assets/img/automobile-gbfab4f81f_640.jpg"
@@ -452,7 +454,7 @@
                 </div>
               </div>
               <button type="submit" class="btn btn-dark btn-block">
-                Lähetä
+                Lähetä <i style="margin-left: 3px;" class="fa-solid fa-paper-plane"></i>
               </button>
             </form>
           </div>
@@ -473,7 +475,7 @@
                 <p class="card-text">
                   Ihanan makuinen marjahillo, jota saat aamiaisellakin.
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
 
@@ -489,7 +491,7 @@
                   Lounaspöydän ikisuosikki, kaurakeksit Kuikan kokkien itse
                   leipomana
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
 
@@ -505,7 +507,7 @@
                   Tällä salaattikastikkeella saat tylsemmänkin salaatin
                   maistumaan huikealta.
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
 
@@ -520,7 +522,7 @@
                 <p class="card-text">
                   Osta yksi tiu kuikan kanojen munia mukaasi.
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
           </div>
@@ -537,7 +539,7 @@
                 <p class="card-text">
                   Pidä kätesi lämpimänä myös talvipakkasilla!
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
 
@@ -550,7 +552,7 @@
               <div class="card-body">
                 <h5 class="card-title">Kuikka-pipo</h5>
                 <p class="card-text">Lämpimin pipo minkä löydät! Neu</p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
 
@@ -565,7 +567,7 @@
                 <p class="card-text">
                   Hanki vaikka tuliaiseksi ihanalta lomaltasi.
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
 
@@ -581,7 +583,7 @@
                   Kääriydy lämpimään paitaan ja muistele lämmöllä matkaasi
                   Kuikan Ranchille.
                 </p>
-                <button class="btn btn-dark">Osta</button>
+                <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Osta</button>
               </div>
             </div>
           </div>
