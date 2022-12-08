@@ -146,6 +146,31 @@ footer i {
 }
 
 //mediaqueryt
+// ettei mobiilissa animaatiot näy, jos on laitettu päälle animaatioiden vähentäminen
+@media (prefers-reduced-motion: no-preference) {
+  .site-animaatio {
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  //landingin animaatio
+  .animate {
+    transition: all 650ms ease-in;
+    text-align: center;
+  }
+  .animate:hover {
+    transform: scale(1.5) rotate(360deg);
+  }
+  .animate a {
+    font-family: $head-font;
+    color: black;
+    text-decoration: none;
+    transition: all 400ms ease-in-out;
+  }
+  .animate a:hover {
+    color: white;
+  }
+}
 
 //esittelykuvien asettelu ja koon määrittely kun siirtyvät alekkain
 @media screen and (max-width: 576px) {
@@ -181,28 +206,3 @@ footer i {
   }
 }
 
-// ettei mobiilissa animaatiot näy, jos on laitettu päälle animaatioiden vähentäminen
-@media (prefers-reduced-motion: no-preference) {
-  .site-animaatio {
-    animation-name: heading;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-  //landingin animaatio
-  .animate {
-    transition: all 650ms ease-in;
-    text-align: center;
-  }
-  .animate:hover {
-    transform: scale(1.5) rotate(360deg);
-  }
-  .animate a {
-    font-family: $head-font;
-    color: black;
-    text-decoration: none;
-    transition: all 400ms ease-in-out;
-  }
-  .animate a:hover {
-    color: white;
-  }
-}
