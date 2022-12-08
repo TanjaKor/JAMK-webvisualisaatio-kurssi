@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--bootstrapin tyylit-->
     <link rel="stylesheet" href="assets/css/starter.css" />
+    <!--googlefontit-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap"
       rel="stylesheet"
     />
+    <!--fontawesome-->
     <link href="node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
     <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
     <link href="node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
@@ -67,6 +70,7 @@
             </ul>
           </div>
         </nav>
+
         <!-- "hero" tehty bootstrapin jumbotronilla -->
         <div class="jumbotron jumbotron-fluid">
           <div class="overlay"></div>
@@ -80,7 +84,7 @@
       <main>
         <!-- koti, tehty bootstrapin omalla gridillä -->
         <section class="container">
-          <h1>Esittely yrittäjistä</h1>
+          <h1 class="site-animaatio">Esittely yrittäjistä</h1>
           <div class="row justify-content-between mt-5">
             <div class="col-sm-5 esittely">
               <a
@@ -149,7 +153,7 @@
         </section>
 
         <section class="container my-5">
-          <h1>Esittely Ranchistä</h1>
+          <h1 class="site-animaatio">Esittely Ranchistä</h1>
           <article class="row mt-5">
             <div class="col-md-12" style="text-align: center">
               <a
@@ -184,7 +188,7 @@
         <!-- majoitusosa, tehty bootstrapin omalla gridillä -->
         <section id="majoitus">
           <div class="container mt-6 keskitetty">
-            <h1>Majoitus</h1>
+            <h1 class="site-animaatio">Majoitus</h1>
 
             <!--kartano-->
             <section class="row justify-content-start mt-4">
@@ -262,7 +266,7 @@
         <!-- ruokaosa, tehty bootstrapin flexboxilla -->
         <section id="ruoka">
           <header class="d-sm-flex justify-content-center mt-6">
-            <h1>Ruoka</h1>
+            <h1 class="site-animaatio">Ruoka</h1>
           </header>
           <div
             class="d-sm-flex flex-wrap flex-sm-nowrap flex-row justify-content-between keskitetty"
@@ -374,7 +378,7 @@
         <!--Varaussivu, tehty gridillä-->
         <section id="varaa">
           <div class="container mt-6">
-            <h1 class="mb-5">Varaa oma unelmalomasi nyt!</h1>
+            <h1 class="mb-5 site-animaatio">Varaa oma unelmalomasi nyt!</h1>
             <form>
               <div class="form-row">
                 <div class="form-group col-md-6">
@@ -463,7 +467,7 @@
 
         <!--Verkkokauppa, tehty bootstrapin flexboxilla-->
         <section id="kauppa">
-          <h1 class="mb-5 mt-6">Osta Kuikan Ranchin tuotteita!</h1>
+          <h1 class="mb-5 mt-6 site-animaatio">Osta Kuikan Ranchin tuotteita!</h1>
           <div class="d-flex flex-wrap flex-lg-nowrap flex-row mt-4 keskitetty justify-content-center">
             <div class="card mx-1 my-2">
               <img
@@ -592,6 +596,7 @@
       </main>
 
       <hr class="my-5" />
+      <!--- Footer -->
       <footer class="container keskitetty">
         <div class="row justify-items-around">
           <div class="col-sm-4">
@@ -606,7 +611,7 @@
         </div>
         <div class="col-sm-4">
           <p>Löydät meidät somesta!<br>
-            <!--linkkejä en tähän laittanut, koska vometilejä ei ole :)-->
+            <!--linkkejä en tähän laittanut, koska sometilejä ei ole :)-->
             <i class="fa-brands fa-facebook fa-xl"></i>
             <i class="fa-brands fa-instagram fa-xl"></i>
             <i class="fa-brands fa-twitter fa-xl"></i>
@@ -615,7 +620,7 @@
       </div>
     </footer>
     </div>
-
+    <!--tarvittavat skriptit-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script type="module" src="assets/js/starter.js"></script>
   </body>
