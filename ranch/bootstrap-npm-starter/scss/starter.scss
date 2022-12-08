@@ -5,22 +5,27 @@ $enable-shadows: true;
 // Valmiina olleet muuttujat
 $body-color: #333;
 $body-bg: #fff;
-$border-radius: .4rem;
+$border-radius: 0.4rem;
 $success: #7952b3;
 
 // Minun luomani muuttujat
-$head-font: 'Dancing Script', cursive;
-$norm-font: 'Lato', sans-serif;
-$assetPath :"../img";
+$head-font: "Dancing Script", cursive;
+$norm-font: "Lato", sans-serif;
+$assetPath: "../img";
 $shadow: black 0.3em 0.3em 0.3em;
 $imgshadow: 0.5em 0.2em 1em rgb(72, 72, 72);
 $imgborder: black solid 1.5px;
 $radius: 15px;
+
+// Liukuvärit taustalle
 $gradients: () !default;
-$gradients: map-merge((
-    warm: linear-gradient(100deg, #5efa61 0%, #F2CD48 33%, #ff5900 100%),
-    hot: linear-gradient(100deg, #de8117 0%, #eb7684 40%,#9a59f6 100%)
-), $gradients);
+$gradients: map-merge(
+  (
+    warm: linear-gradient(100deg, #5efa61 0%, #f2cd48 33%, #ff5900 100%),
+    hot: linear-gradient(100deg, #de8117 0%, #eb7684 40%, #9a59f6 100%),
+  ),
+  $gradients
+);
 
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
@@ -60,7 +65,8 @@ body {
   position: relative;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: $head-font;
   text-align: center;
 }
@@ -68,7 +74,7 @@ h1, h2 {
 div.jumbotron {
   background: url(#{$assetPath}/door-g4defecf07_640.jpg);
   width: 100%;
-  height:auto;
+  height: auto;
   text-align: center;
   color: white;
   text-shadow: $shadow;
@@ -100,66 +106,59 @@ div.jumbotron {
   border-radius: $radius;
 }
 //osioiden välille kunnolla tilaa
-#majoitus, #ruoka, #varaa, #kauppa {
+#majoitus,
+#ruoka,
+#varaa,
+#kauppa {
   padding-top: 50px;
 }
-//landingin animaatio
-.animate {
-  transition: all 650ms ease-in;
-  text-align: center;
-}
-.animate:hover {
-  transform: scale(1.5) rotate(360deg);
-}
-.animate a {
-  font-family: $head-font;
-  color: black;
-  text-decoration: none;
-  transition: all 400ms ease-in-out;
-}
-.animate a:hover{
-  color: white;
-}
+
 //muokattu isompi ylämarginaali, mitä perusbootsrapissa tarjotaan
 .mt-6 {
   margin-top: 4rem !important;
 }
 //keskitetään teksti
 .keskitetty {
-    text-align: center;
+  text-align: center;
 }
 footer i {
-  margin-right: 5px !important; 
+  margin-right: 5px !important;
 }
 
-@keyframes heading {
-  0%  {opacity: 0; transform: scale(1.3);}
-  100% {opacity: 100; transform: scale(1);}
-}
-
-// Liukuvärit taustalle
 @mixin bg-gradient($parent, $gradient) {
   #{$parent} {
     background: $gradient;
   }
-} 
+}
 @each $gradient, $value in $gradients {
   @include bg-gradient(".bg-gradient-#{$gradient}", $value);
- }
- 
+}
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 100;
+    transform: scale(1);
+  }
+}
+
 //mediaqueryt
 
 //esittelykuvien asettelu ja koon määrittely kun siirtyvät alekkain
- @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .esittely {
     max-width: 300px !important;
-    margin:auto !important;
-  } 
-} 
+    margin: auto !important;
+  }
+}
+
 //landingpagen otsikon paikan muutos
- @media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .ei_mobiili {
-    display: none
+    display: none;
   }
   .animate {
     transition: none;
@@ -169,18 +168,18 @@ footer i {
   #kauppa .keskitetty div {
     width: 100% !important;
   }
-} 
+}
 //mobiili-otsikko landingsivulta pois näkyviltä, kun 650px leveys ja kaupan muotoilut desktop/landscape näkymässä
 @media screen and (min-width: 650px) {
   .mobiili_otsikko {
-    display: none
+    display: none;
   }
-  #kauppa .keskitetty div{
+  #kauppa .keskitetty div {
     flex: 1 !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-} 
+}
 
 // ettei mobiilissa animaatiot näy, jos on laitettu päälle animaatioiden vähentäminen
 @media (prefers-reduced-motion: no-preference) {
@@ -188,5 +187,22 @@ footer i {
     animation-name: heading;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+  }
+  //landingin animaatio
+  .animate {
+    transition: all 650ms ease-in;
+    text-align: center;
+  }
+  .animate:hover {
+    transform: scale(1.5) rotate(360deg);
+  }
+  .animate a {
+    font-family: $head-font;
+    color: black;
+    text-decoration: none;
+    transition: all 400ms ease-in-out;
+  }
+  .animate a:hover {
+    color: white;
   }
 }
