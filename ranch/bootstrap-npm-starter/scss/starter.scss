@@ -146,11 +146,11 @@ footer i {
 //mediaqueryt
 // ettei mobiilissa animaatiot näy, jos on laitettu päälle animaatioiden vähentäminen
 @media (prefers-reduced-motion: no-preference) {
- // .site-animaatio {
-  //  animation-name: heading;
-  //  animation-duration: 1s;
-  //  animation-fill-mode: forwards;
-  //}
+ .site-animaatio {
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
   //landingin animaatio
   .animate {
     transition: all 650ms ease-in;
