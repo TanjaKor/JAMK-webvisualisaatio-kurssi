@@ -135,7 +135,7 @@ footer i {
 @keyframes heading {
   0% {
     opacity: 0;
-    transform: scale(1.3);
+    transform: scale(1.4);
   }
   100% {
     opacity: 100;
@@ -148,7 +148,7 @@ footer i {
 @media (prefers-reduced-motion: no-preference) {
  .site-animaatio {
     animation-name: heading;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
   }
   //landingin animaatio
@@ -176,24 +176,35 @@ footer i {
     max-width: 300px !important;
     margin: auto !important;
   }
+  body {
+    margin: 0.1rem !important;
+  }
+  //osioiden välille kunnolla tilaa
+#majoitus,
+#ruoka,
+#varaa,
+#kauppa {
+  padding-top: 10px !important;
+}
+.ei_mobiili {
+  display: none;
+}
+.animate {
+  transition: none;
+}
+
+//verkkokaupan mobiiliasettelu
+#kauppa .keskitetty div {
+  width: 100% !important;
+}
 }
 
 //landingpagen otsikon paikan muutos
-@media screen and (max-width: 650px) {
-  .ei_mobiili {
-    display: none;
-  }
-  .animate {
-    transition: none;
-  }
-
-  //verkkokaupan mobiiliasettelu
-  #kauppa .keskitetty div {
-    width: 100% !important;
-  }
-}
+//@media screen and (max-width: 650px) {
+  
+//}
 //mobiili-otsikko landingsivulta pois näkyviltä, kun 650px leveys ja kaupan muotoilut desktop/landscape näkymässä
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 576px) {
   .mobiili_otsikko {
     display: none;
   }
